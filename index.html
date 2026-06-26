@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GateX AI — Next-Gen AI Platform | Hackathon 2026</title>
+    <meta name="description" content="GateX AI is a next-generation artificial intelligence platform built for speed, scale, and security. Simplify your workflow with cutting-edge AI features.">
+    <meta property="og:title" content="GateX AI — Next-Gen AI Platform">
+    <meta property="og:description" content="Simplify your workflow with cutting-edge AI features. Built for the future.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle System Canvas (Gestalt Visual Perception) -->
+    <canvas id="particleCanvas"></canvas>
+    <!-- Cursor Trail Canvas -->
+    <canvas id="cursorTrail"></canvas>
+    <!-- Custom Cursor Dot -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <!-- ======================== NAVBAR ======================== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <div class="brand-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="#FFC801"/>
+                        <path d="M8 16L16 8L24 16L16 24L8 16Z" fill="#114C5A"/>
+                        <circle cx="16" cy="16" r="4" fill="#FFC801"/>
+                    </svg>
+                </div>
+                <span class="brand-name">GateX<span class="brand-accent">AI</span></span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#key-features" class="nav-link">Solutions</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#pricing" class="btn btn-glow">
+                    Book a Demo
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================== HERO ======================== -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg">
+                <div class="hero-circle-wrapper">
+                    <div class="hero-circle"></div>
+                    <div class="hero-glow"></div>
+                    <div class="hero-glow-secondary"></div>
+                </div>
+                <div class="hero-grid-lines"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="animate-up delay-1">
+                        <a href="#features" class="hero-badge">
+                            <span class="badge-label">What's New</span>
+                            <span class="badge-text">GateX AI v2.0 Released</span>
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                    <div class="animate-up delay-2">
+                        <h1 class="hero-title">Simplify Your Workflow With <span class="text-gradient">AI-Powered</span> Intelligence</h1>
+                    </div>
+                    <div class="animate-up delay-3">
+                        <p class="hero-subtitle">Gain clarity and harness the power of your data with GateX AI. Our intuitive dashboard provides real-time analytics, predictive insights, and seamless automation.</p>
+                    </div>
+                    <div class="animate-up delay-4">
+                        <div class="hero-actions">
+                            <a href="#features" class="btn btn-outline">
+                                Explore Features
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                            <a href="#pricing" class="btn btn-glow">
+                                Book a Demo
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== TRUSTED BY ======================== -->
+        <section class="trusted-section" id="trusted">
+            <div class="container">
+                <div class="fade-in-scroll">
+                    <p class="trusted-label">Join 4,000+ companies already growing</p>
+                </div>
+                <div class="fade-in-scroll">
+                    <div class="logo-marquee">
+                        <div class="logo-track">
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>
+                                <span>TechCorp</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                                <span>InnovateLabs</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                <span>DataFlow</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                                <span>CloudSync</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                <span>NeuralNet</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                                <span>QuantumAI</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
+                                <span>ByteForge</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                <span>SynthWave</span>
+                            </a>
+                            <!-- Duplicate for seamless loop -->
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>
+                                <span>TechCorp</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                                <span>InnovateLabs</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                <span>DataFlow</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                                <span>CloudSync</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                <span>NeuralNet</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                                <span>QuantumAI</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
+                                <span>ByteForge</span>
+                            </a>
+                            <a href="#" class="logo-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                <span>SynthWave</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== FEATURES GRID ======================== -->
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="fade-in-scroll">
+                        <h2 class="section-title">GateX AI Unleashed: <span class="text-gradient">Latest Innovations</span></h2>
+                    </div>
+                    <div class="fade-in-scroll">
+                        <p class="section-subtitle">Explore the frontier of AI evolution. Our latest features redefine the boundaries of what's possible in intelligent automation.</p>
+                    </div>
+                </div>
+                <div class="features-grid fade-in-scroll">
+                    <div class="feature-card" id="feature-register">
+                        <div class="feature-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </div>
+                        <h3 class="feature-title">Integrate</h3>
+                        <p class="feature-desc">Connect your existing tools and data sources effortlessly. GateX AI integrates with 200+ platforms out of the box.</p>
+                    </div>
+                    <div class="feature-card" id="feature-work">
+                        <div class="feature-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3 class="feature-title">Automate</h3>
+                        <p class="feature-desc">Build intelligent workflows that learn and adapt. Reduce manual tasks by 85% with our AI-driven automation engine.</p>
+                    </div>
+                    <div class="feature-card" id="feature-paid">
+                        <div class="feature-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <h3 class="feature-title">Scale</h3>
+                        <p class="feature-desc">From startup to enterprise, scale your AI operations without friction. Handle millions of requests with zero downtime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== KEY FEATURES ======================== -->
+        <section class="section" id="key-features">
+            <div class="container">
+                <div class="key-features-layout">
+                    <div class="key-features-text fade-in-scroll">
+                        <h2 class="section-title left-align">The Potential of <span class="text-gradient">Artificial Intelligence</span>: Our Key Features</h2>
+                    </div>
+                    <div class="key-features-content fade-in-scroll">
+                        <div class="checklist">
+                            <div class="check-item">
+                                <div class="check-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span>Real-time predictive analytics with 99.9% accuracy</span>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span>Natural language processing for seamless interaction</span>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span>End-to-end encryption with enterprise-grade security</span>
+                            </div>
+                        </div>
+                        <p class="key-features-desc">GateX AI combines cutting-edge machine learning with an intuitive interface, enabling teams to make data-driven decisions faster than ever before.</p>
+                        <a href="#features" class="btn btn-outline">
+                            Learn More
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- App Screenshot Placeholder -->
+                <div class="app-showcase fade-in-scroll">
+                    <div class="app-frame">
+                        <div class="app-topbar">
+                            <div class="app-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="app-url">gatex-ai.app/dashboard</div>
+                        </div>
+                        <div class="app-screen">
+                            <div class="app-sidebar">
+                                <div class="sidebar-item active">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                                    Dashboard
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                    Analytics
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                                    Users
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                                    Settings
+                                </div>
+                            </div>
+                            <div class="app-main">
+                                <div class="app-stat-cards">
+                                    <div class="stat-card">
+                                        <div class="stat-label">Total Users</div>
+                                        <div class="stat-value">24,589</div>
+                                        <div class="stat-change up">+12.5%</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-label">Revenue</div>
+                                        <div class="stat-value">$128K</div>
+                                        <div class="stat-change up">+8.2%</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-label">AI Tasks</div>
+                                        <div class="stat-value">1.2M</div>
+                                        <div class="stat-change up">+23.1%</div>
+                                    </div>
+                                </div>
+                                <div class="app-chart">
+                                    <div class="chart-bars">
+                                        <div class="chart-bar" style="--h: 40%"></div>
+                                        <div class="chart-bar" style="--h: 65%"></div>
+                                        <div class="chart-bar" style="--h: 45%"></div>
+                                        <div class="chart-bar" style="--h: 80%"></div>
+                                        <div class="chart-bar" style="--h: 55%"></div>
+                                        <div class="chart-bar" style="--h: 90%"></div>
+                                        <div class="chart-bar" style="--h: 70%"></div>
+                                        <div class="chart-bar active" style="--h: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-grid fade-in-scroll">
+                    <div class="stat-block">
+                        <div class="stat-number" data-count="4000">4,000+</div>
+                        <div class="stat-name">Global Customers</div>
+                        <p class="stat-desc">Trusted by teams across 40+ countries worldwide.</p>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-number">600%</div>
+                        <div class="stat-name">Return on Investment</div>
+                        <p class="stat-desc">Average ROI reported by enterprise customers.</p>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-name">Always Available</div>
+                        <p class="stat-desc">Round-the-clock support whenever you need it.</p>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-name">Uptime Guarantee</div>
+                        <p class="stat-desc">Enterprise-grade reliability you can count on.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== ALTERNATING FEATURES ======================== -->
+        <section class="section" id="alt-features">
+            <div class="container">
+                <!-- Feature Row 1 -->
+                <div class="alt-feature-row fade-in-scroll">
+                    <div class="alt-feature-content">
+                        <h3 class="alt-feature-title">Intelligent Dashboard for Smarter Decisions</h3>
+                        <p class="alt-feature-desc">Visualize your data with interactive charts, heatmaps, and real-time KPI tracking. Our AI surfaces the insights that matter most to your business.</p>
+                        <a href="#" class="btn btn-outline small">
+                            See Documentation
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <ul class="alt-checklist">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#F1F6F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Customizable layouts for efficient analysis
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#F1F6F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Drag-and-drop widget configuration
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#F1F6F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Create multiple profiles per team
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="alt-feature-visual">
+                        <div class="visual-card">
+                            <div class="visual-card-inner">
+                                <div class="mini-chart">
+                                    <svg viewBox="0 0 200 80" class="line-chart-svg">
+                                        <defs>
+                                            <linearGradient id="chartGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#FFC801;stop-opacity:0.3"/>
+                                                <stop offset="100%" style="stop-color:#FFC801;stop-opacity:0"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M0,60 Q30,50 50,35 T100,25 T150,40 T200,15" fill="none" stroke="#FFC801" stroke-width="2"/>
+                                        <path d="M0,60 Q30,50 50,35 T100,25 T150,40 T200,15 L200,80 L0,80 Z" fill="url(#chartGrad1)"/>
+                                    </svg>
+                                </div>
+                                <div class="visual-stat-row">
+                                    <span class="visual-label">Efficiency Score</span>
+                                    <span class="visual-value">94.7%</span>
+                                </div>
+                                <div class="visual-stat-row">
+                                    <span class="visual-label">Tasks Automated</span>
+                                    <span class="visual-value">1,247</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Row 2 (reversed) -->
+                <div class="alt-feature-row reversed fade-in-scroll">
+                    <div class="alt-feature-visual">
+                        <div class="visual-card">
+                            <div class="visual-card-inner">
+                                <div class="code-block-demo">
+                                    <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">ai</span> = <span class="code-keyword">await</span> GateX.<span class="code-func">init</span>({</div>
+                                    <div class="code-line">  <span class="code-prop">model</span>: <span class="code-string">"gpt-nexus-v2"</span>,</div>
+                                    <div class="code-line">  <span class="code-prop">streaming</span>: <span class="code-bool">true</span>,</div>
+                                    <div class="code-line">  <span class="code-prop">security</span>: <span class="code-string">"enterprise"</span></div>
+                                    <div class="code-line">});</div>
+                                    <div class="code-line"><span class="code-comment">// 3 lines to production AI</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alt-feature-content">
+                        <h3 class="alt-feature-title">Developer-First API That Just Works</h3>
+                        <p class="alt-feature-desc">Ship AI features in minutes, not months. Our SDK supports 12+ languages with type-safe interfaces, auto-retry, and streaming responses built-in.</p>
+                        <a href="#" class="btn btn-outline small">
+                            View API Docs
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <ul class="alt-checklist">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#F1F6F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Type-safe SDKs for Python, JS, Go, Rust
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#F1F6F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Built-in rate limiting and auto-retry
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#F1F6F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Streaming responses out of the box
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== BENTO FEATURES (Desktop) / ACCORDION (Mobile) ======================== -->
+        <section class="section" id="bento-features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="fade-in-scroll">
+                        <h2 class="section-title">Explore the <span class="text-gradient">Platform</span></h2>
+                    </div>
+                    <div class="fade-in-scroll">
+                        <p class="section-subtitle">Hover to explore on desktop, tap to expand on mobile. Your context is preserved across breakpoints.</p>
+                    </div>
+                </div>
+                <div class="bento-grid fade-in-scroll" id="bentoGrid">
+                    <div class="bento-card" data-index="0">
+                        <div class="bento-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFC801" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3 class="bento-title">Multi-Layer Models</h3>
+                        <p class="bento-desc">Stack and combine AI models for complex workflows. Our orchestration layer handles the complexity so you don't have to.</p>
+                        <div class="bento-expand-content">
+                            <div class="bento-detail">
+                                <span class="bento-metric">50+</span>
+                                <span class="bento-metric-label">Pre-trained models</span>
+                            </div>
+                            <div class="bento-detail">
+                                <span class="bento-metric">< 100ms</span>
+                                <span class="bento-metric-label">Avg response time</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-card" data-index="1">
+                        <div class="bento-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9932" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h3 class="bento-title">Enterprise Security</h3>
+                        <p class="bento-desc">SOC 2 Type II certified. End-to-end encryption, role-based access control, and audit logs for complete compliance.</p>
+                        <div class="bento-expand-content">
+                            <div class="bento-detail">
+                                <span class="bento-metric">SOC 2</span>
+                                <span class="bento-metric-label">Type II Certified</span>
+                            </div>
+                            <div class="bento-detail">
+                                <span class="bento-metric">256-bit</span>
+                                <span class="bento-metric-label">AES Encryption</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-card wide" data-index="2">
+                        <div class="bento-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFC801" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <h3 class="bento-title">Real-Time Analytics</h3>
+                        <p class="bento-desc">Monitor every metric that matters with sub-second latency. Custom dashboards, alerts, and anomaly detection powered by AI.</p>
+                        <div class="bento-expand-content">
+                            <div class="bento-detail">
+                                <span class="bento-metric">< 1s</span>
+                                <span class="bento-metric-label">Data latency</span>
+                            </div>
+                            <div class="bento-detail">
+                                <span class="bento-metric">∞</span>
+                                <span class="bento-metric-label">Custom dashboards</span>
+                            </div>
+                            <div class="bento-detail">
+                                <span class="bento-metric">AI</span>
+                                <span class="bento-metric-label">Anomaly detection</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-card" data-index="3">
+                        <div class="bento-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9932" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <h3 class="bento-title">Global Edge Network</h3>
+                        <p class="bento-desc">Deploy to 200+ edge locations worldwide. Your AI runs closer to your users for lightning-fast inference at scale.</p>
+                        <div class="bento-expand-content">
+                            <div class="bento-detail">
+                                <span class="bento-metric">200+</span>
+                                <span class="bento-metric-label">Edge locations</span>
+                            </div>
+                            <div class="bento-detail">
+                                <span class="bento-metric">99.99%</span>
+                                <span class="bento-metric-label">Uptime SLA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== PRICING ======================== -->
+        <section class="section" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <div class="fade-in-scroll">
+                        <h2 class="section-title">Simple, Transparent <span class="text-gradient">Pricing</span></h2>
+                    </div>
+                    <div class="fade-in-scroll">
+                        <p class="section-subtitle">Choose the plan that fits your needs. No hidden fees, cancel anytime.</p>
+                    </div>
+                </div>
+
+                <!-- Pricing Controls (State-Isolated) -->
+                <div class="pricing-controls fade-in-scroll" id="pricingControls">
+                    <div class="billing-toggle" id="billingToggle">
+                        <span class="toggle-label active" data-billing="monthly">Monthly</span>
+                        <div class="toggle-switch" id="toggleSwitch">
+                            <div class="toggle-knob"></div>
+                        </div>
+                        <span class="toggle-label" data-billing="annual">Annual <span class="save-badge">Save 20%</span></span>
+                    </div>
+                    <div class="currency-select" id="currencySelect">
+                        <button class="currency-btn active" data-currency="USD">$ USD</button>
+                        <button class="currency-btn" data-currency="INR">₹ INR</button>
+                        <button class="currency-btn" data-currency="EUR">€ EUR</button>
+                    </div>
+                </div>
+
+                <div class="pricing-grid fade-in-scroll" id="pricingGrid">
+                    <!-- Starter -->
+                    <div class="pricing-card" id="plan-starter">
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Starter</h3>
+                            <p class="plan-tagline">Perfect for individuals & small teams</p>
+                        </div>
+                        <div class="pricing-amount">
+                            <span class="currency-symbol" data-price-symbol>$</span>
+                            <span class="price-value" data-price="29">29</span>
+                            <span class="price-period">/ mo</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                5,000 AI requests / month
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                3 team members
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Basic analytics dashboard
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Email support
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-outline full-width">Get Started</a>
+                    </div>
+
+                    <!-- Pro (Featured) -->
+                    <div class="pricing-card featured" id="plan-pro">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Pro</h3>
+                            <p class="plan-tagline">Best for growing businesses</p>
+                        </div>
+                        <div class="pricing-amount">
+                            <span class="currency-symbol" data-price-symbol>$</span>
+                            <span class="price-value" data-price="79">79</span>
+                            <span class="price-period">/ mo</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                50,000 AI requests / month
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Unlimited team members
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Advanced analytics + AI insights
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Priority support (< 4hr SLA)
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Custom model fine-tuning
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-glow full-width">Get Started</a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="pricing-card" id="plan-enterprise">
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Enterprise</h3>
+                            <p class="plan-tagline">For large-scale deployments</p>
+                        </div>
+                        <div class="pricing-amount">
+                            <span class="currency-symbol" data-price-symbol>$</span>
+                            <span class="price-value" data-price="199">199</span>
+                            <span class="price-period">/ mo</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Unlimited AI requests
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Unlimited team members
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Dedicated infrastructure
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                24/7 dedicated support + SLA
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="#FFC801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Custom integrations & on-prem
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-outline full-width">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== TESTIMONIALS ======================== -->
+        <section class="section" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <div class="fade-in-scroll">
+                        <h2 class="section-title">Loved by <span class="text-gradient">Thousands</span></h2>
+                    </div>
+                    <div class="fade-in-scroll">
+                        <p class="section-subtitle">Hear from teams that transformed their workflows with GateX AI.</p>
+                    </div>
+                </div>
+                <div class="testimonials-grid fade-in-scroll">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"GateX AI reduced our data processing time by 73%. The real-time analytics dashboard alone is worth 10x the price. Game changer for our team."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AK</div>
+                            <div>
+                                <div class="author-name">Aditya Kumar</div>
+                                <div class="author-role">CTO, TechFlow Inc.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"The developer API is incredibly clean. We went from prototype to production in 2 days. The auto-retry and streaming support saved us weeks of work."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SP</div>
+                            <div>
+                                <div class="author-name">Sarah Park</div>
+                                <div class="author-role">Lead Engineer, DataVerse</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Enterprise security features gave our compliance team complete peace of mind. SOC 2 certified, audit logs, and RBAC — everything we needed."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RM</div>
+                            <div>
+                                <div class="author-name">Raj Mehta</div>
+                                <div class="author-role">VP Engineering, FinSecure</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== CTA / NEWSLETTER ======================== -->
+        <section class="section cta-section" id="cta">
+            <div class="container">
+                <div class="cta-card fade-in-scroll">
+                    <div class="cta-glow"></div>
+                    <h2 class="cta-title">Ready to Supercharge Your Workflow?</h2>
+                    <p class="cta-subtitle">Join thousands of teams already using GateX AI to ship faster, smarter, and more securely.</p>
+                    <div class="cta-actions">
+                        <div class="cta-input-group">
+                            <input type="email" placeholder="Enter your email" class="cta-input" id="ctaEmail">
+                            <button class="btn btn-glow" id="ctaSubmit">
+                                Get Started Free
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                        <p class="cta-footnote">Free 14-day trial · No credit card required · Cancel anytime</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="brand">
+                        <div class="brand-logo">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <rect width="32" height="32" rx="8" fill="#FFC801"/>
+                                <path d="M8 16L16 8L24 16L16 24L8 16Z" fill="#114C5A"/>
+                                <circle cx="16" cy="16" r="4" fill="#FFC801"/>
+                            </svg>
+                        </div>
+                        <span class="brand-name">GateX<span class="brand-accent">AI</span></span>
+                    </a>
+                    <p class="footer-tagline">Next-generation AI platform built for speed, scale, and security.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Product</h4>
+                    <a href="#features" class="footer-link">Features</a>
+                    <a href="#pricing" class="footer-link">Pricing</a>
+                    <a href="#" class="footer-link">API Docs</a>
+                    <a href="#" class="footer-link">Changelog</a>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Legal</h4>
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                    <a href="#" class="footer-link">Security</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GateX AI. Built with ❤️ for the Hackathon.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
